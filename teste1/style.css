@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600&display=swap");
+
+:root {
+  --rosa-claro: #ffe3ec;
+  --rosa: #ff7aa2;
+  --rosa-forte: #e0457b;
+  --vinho: #5a1a33;
+  --papel: #fff8fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  font-family: "Quicksand", "Segoe UI", sans-serif;
+  color: var(--vinho);
+  line-height: 1.8;
+  background:
+    radial-gradient(circle at 15% 10%, #ffc2d6 0, transparent 40%),
+    radial-gradient(circle at 85% 90%, #ffd0de 0, transparent 45%),
+    var(--rosa-claro);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header::before {
+  content: "\2665";
+  display: block;
+  font-size: 2.5rem;
+  color: var(--rosa-forte);
+  animation: batida 1.6s ease-in-out infinite;
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(2.4rem, 8vw, 3.8rem);
+  color: var(--rosa-forte);
+  line-height: 1.2;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem 1.75rem;
+  background: var(--papel);
+  border: 2px solid var(--rosa);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(224, 69, 123, 0.2);
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(1.6rem, 5vw, 2.1rem);
+  color: var(--rosa-forte);
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+main p {
+  font-size: 1.05rem;
+}
+
+footer {
+  margin-top: 1.75rem;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  color: var(--rosa-forte);
+}
+
+footer::after {
+  content: " \2665";
+}
+
+@keyframes batida {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.2); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header::before {
+    animation: none;
+  }
+}
